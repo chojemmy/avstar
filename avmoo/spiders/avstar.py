@@ -10,7 +10,7 @@ class AvstarSpider(scrapy.Spider):
     def start_urls(self):
         url_tmpl = 'https://avmoo.xyz/cn/actresses/page/{}'
 
-        return(url_tmpl.format(i) for i in range(1,20))
+        return(url_tmpl.format(i) for i in range(1,206))
 
     def parse(self, response):
         for avstar in response.xpath('//div[@class="item"]'):
